@@ -1,0 +1,6 @@
+/client_cpy/
+node_modules/
+.env
+coverage/
+dist/
+*.log

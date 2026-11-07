@@ -1,0 +1,32 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id        Int              @id @default(autoincrement())
+  name      String
+  email     String           @unique
+  password  String
+  readings  GlucoseReading[]
+  createdAt DateTime         @default(now())
+  updatedAt DateTime         @updatedAt
+}
+
+model GlucoseReading {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  value     Int
+  date      DateTime @db.Date
+  slot      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, date, slot])
+  @@index([userId, date])
+}
