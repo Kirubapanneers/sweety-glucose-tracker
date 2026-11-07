@@ -1,3 +1,7 @@
+## Demo Video
+
+[Watch Sweety – Blood Glucose Tracker Demo] https://drive.google.com/file/d/1R9PxLdSgCYfOg1LZCLejdBVNyo5c8N8d/view?usp=drive_link
+
 # Sweety – Blood Glucose Tracker
 
 Sweety is a full-stack blood glucose tracking application that helps users record, manage, and monitor their daily glucose readings. Users can view daily, month-to-date, and previous-month reports with key statistics.
